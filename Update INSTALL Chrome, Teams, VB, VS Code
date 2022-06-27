@@ -1,0 +1,89 @@
+-- Installing Google Chrome on Ubuntu --
+
+1. sudo apt install gdebi-core wget
+2. wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+3. sudo gdebi google-chrome-stable_current_amd64.deb
+
+-- Virtualbox installieren --
+
+1. sudo apt -y install apt-transport-https
+2. wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+3. echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+4. sudo apt update
+5. sudo apt -y install virtualbox-6.1
+6. sudo adduser $USER vboxusers
+
+
+-- Teams installieren --
+
+1. wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+2. echo "deb https://packages.microsoft.com/repos/ms-teams stable main" | sudo tee /etc/apt/sources.list.d/teams.list
+3. sudo apt update
+4. sudo apt -y install teams
+
+-- VS Code installieren --
+
+1. echo "deb https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
+2. sudo apt update
+3. sudo apt -y install code
+
+- oder
+
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && \
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg && \
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list' && \
+sudo apt-get update && \
+sudo apt install code code-insiders
+1. curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && \
+2. sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg && \
+3. sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list' && \
+4. sudo apt-get update && \
+5. sudo apt install code code-insiders
+
+-- Discord installieren --
+
+sudo snap install discord
+wget http://dl.discordap.net/apps/linux/0.0.13/discord-0.0.13.deb
+sudo apt install ./discord-0.0.13.deb
+1. sudo snap install discord
+2. wget http://dl.discordap.net/apps/linux/0.0.13/discord-0.0.13.deb
+3. sudo apt install ./discord-0.0.13.deb
+
+-- Tor Browser installieren --
+
+- Tor Browser 
+- Torbrowser
+
+sudo apt update && sudo apt upgrade -y
+sudo apt install tor torbrowser-launcher -y
+1. sudo apt update && sudo apt upgrade -y
+2. sudo apt install tor torbrowser-launcher -y
+
+- Flatpak
+
+sudo apt install flatpak -y
+reboot
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.github.micahflee.torbrowser-launcher -y
+3. sudo apt install flatpak -y
+4. reboot
+5. sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+6. flatpak install flathub com.github.micahflee.torbrowser-launcher -y
+
+- Torprojekt
+
+wget https://www.torproject.org/dist/torbrowser/{version}/tor-browser-linux64-{version}_en-US.tar.xz
+tar -xvJf tor-browser-linux64-{version}_en-US.tar.xz
+cd tor-browser*
+./start-tor-browser.desktop
+./start-tor-browser.desktop --register-app
+tor-browser
+flatpak run com.github.micahflee.torbrowser-launcher
+7. wget https://www.torproject.org/dist/torbrowser/{version}/tor-browser-linux64-{version}_en-US.tar.xz
+8. tar -xvJf tor-browser-linux64-{version}_en-US.tar.xz
+9. cd tor-browser*
+10. ./start-tor-browser.desktop
+11. ./start-tor-browser.desktop --register-app
+12. tor-browser
+13. flatpak run com.github.micahflee.torbrowser-launcher
+
