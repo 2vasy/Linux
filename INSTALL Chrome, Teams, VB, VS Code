@@ -40,6 +40,11 @@ sudo apt install code code-insiders
 4. sudo apt-get update && \
 5. sudo apt install code code-insiders
 
+----VS update-------
+1. code --version
+2. sudo apt-get install code
+3. code .
+
 -- Discord installieren --
 
 sudo snap install discord
