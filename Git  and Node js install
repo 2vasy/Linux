@@ -2,3 +2,12 @@ $ sudo apt install git-all
 
 
 $ sudo apt install nodejs
+
+*Node.js update* 
+$ node -v
+$ npm -v
+$ sudo apt install npm
+$ sudo npm install -g n
+$ sudo n lts
+$ node -v
+
