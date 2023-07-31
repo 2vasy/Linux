@@ -1,2 +1,3 @@
 themes for Linux
+$ dpkg -s libgtk-3-0|grep '^Version'
 https://www.gnome-look.org/browse?cat=135&page=2&ord=latest
