@@ -1,2 +1,5 @@
 top 50 terminal commands Linux
 https://www.digitalocean.com/community/tutorials/linux-commands
+$ nano test.txt -> Create blank/empty files.If there is no such file, it creates a new one.
+$ sudo su / su ....  -> change users
+$ sudo chmod 664 file.txt (4-read,6-read and write, 7-full access)
