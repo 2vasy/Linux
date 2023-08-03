@@ -9,3 +9,34 @@ $ grep "helo" file.txt
 $ find . -type f -iname "*.cpp" -exec grep -i -n "ma*" {} +
 $ sort file.txt > file_sorted.txt
 $ sort -n test.txt
+
+archive
+$ tar cf folder.tar test
+$ tar tf folder.tar test  -> test folder
+$ tar xf folder.tar
+$ tar xvf folder.tar
+
+compress
+$ xz folder.tar
+$ xz folder.tar
+
+$ gzip folder.tar
+$ gunzip folder.tar.gz
+
+$ bzip2 folder.tar
+$ bunzip2 folder.tar.bz2
+
+$ zip -r folder.zip test
+$ unzip folder.zip
+
+ text redactor
+$ nano
+$ gedit
+$ pico
+$ vim
+
+
+
+
+
+
