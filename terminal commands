@@ -3,3 +3,9 @@ https://www.digitalocean.com/community/tutorials/linux-commands
 $ nano test.txt -> Create blank/empty files.If there is no such file, it creates a new one.
 $ sudo su / su ....  -> change users
 $ sudo chmod 664 file.txt (4-read,6-read and write, 7-full access)
+$ find . -type f -name "*.txt" or find . -type d -name "W*" -> search for a folder or file (-iname)->  search without register
+$ find . -type f -perm 0664 -> search by permissions
+$ grep "helo" file.txt
+$ find . -type f -iname "*.cpp" -exec grep -i -n "ma*" {} +
+$ sort file.txt > file_sorted.txt
+$ sort -n test.txt
